@@ -1,0 +1,33 @@
+@import "./scss";
+
+.container {
+  min-height: 100vh;
+  background-color: $primary-background-color;
+  color: $primary-font-color;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  background: linear-gradient(
+    45deg,
+    $secondary-background-color,
+    $secondary-background-color,
+    $primary-background-color,
+    $primary-background-color
+  );
+
+  @include md {
+    font-size: 5rem;
+  }
+
+  @include lg {
+    font-size: 6rem;
+  }
+
+  @include xl {
+    font-size: 10rem;
+  }
+}

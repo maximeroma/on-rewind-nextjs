@@ -1,0 +1,144 @@
+@import '../scss';
+
+.container {
+  width: 100%;
+  padding: 1rem;
+
+  @include md {
+    width: 50%;
+  }
+}
+
+.inner_container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: $secondary-background-color;
+}
+
+.name {
+  font-size: 0.5rem;
+
+  @include md {
+    font-size: 0.8rem;
+  }
+
+  @include lg {
+    font-size: 1rem;
+  }
+
+  @include xl {
+    font-size: 2rem;
+  }
+}
+
+.video_img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+.thumbnail_container:hover .video_img {
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.info_container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.list_challenger_container {
+  display: flex;
+  font-size: 0.5rem;
+  @include md {
+    font-size: 0.7rem;
+  }
+
+  @include lg {
+    font-size: 0.9rem;
+  }
+
+  @include xl {
+    font-size: 1.9rem;
+  }
+}
+
+.challenger_container_0 {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 5%;
+}
+
+.challenger_container_1 {
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 5%;
+}
+
+.challenger_name_0 {
+  margin-right: 1rem;
+}
+
+.challenger_name_1 {
+  margin-left: 1rem;
+}
+
+.challenger_img {
+  width: 20px;
+  @include md {
+    width: 40px;
+  }
+
+  @include lg {
+    width: 60px;
+  }
+
+  @include xl {
+    width: 80px;
+  }
+  height: auto;
+}
+
+.list_tag_container {
+  display: flex;
+  font-size: 0.3rem;
+  @include md {
+    font-size: 0.5rem;
+  }
+
+  @include lg {
+    font-size: 0.7rem;
+  }
+
+  @include xl {
+    font-size: 0.9rem;
+  }
+}
+
+.tag_container {
+  margin-right: 0.2rem;
+  padding: 0.2rem;
+  background-color: #fff;
+}
+
+.tag_vod {
+  background-color: #0acaff;
+}
+
+.tag_soccer {
+  background-color: #ec0101;
+}

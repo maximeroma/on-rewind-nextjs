@@ -1,0 +1,17 @@
+.list_item {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn_container {
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+}
+
+.btn_inner_container {
+  float: right;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
