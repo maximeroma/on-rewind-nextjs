@@ -1,4 +1,4 @@
-@import "../scss";
+@import '../scss';
 
 .container {
   display: flex;
@@ -38,4 +38,11 @@
   width: 100%;
   min-height: 180px;
   height: auto;
+}
+
+.stream_not_found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }

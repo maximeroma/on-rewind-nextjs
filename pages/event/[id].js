@@ -69,7 +69,9 @@ function EventPage() {
                     />
                   </div>
                 ) : (
-                  <div>Stream not available</div>
+                  <div className={styles.stream_not_found}>
+                    Stream not available
+                  </div>
                 )}
               </div>
             </div>
