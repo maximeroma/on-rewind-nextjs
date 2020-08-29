@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }) {
     <ApolloProvider client={apolloClient}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <div>On Rewind App</div>
+          <div>On Rewind App </div>
         </div>
         <Component {...pageProps} />
       </div>
