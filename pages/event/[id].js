@@ -1,6 +1,5 @@
 import React from 'react'
 import { useQuery, gql } from '@apollo/client'
-
 import { useRouter } from 'next/router'
 import ReactPlayer from 'react-player'
 
@@ -36,9 +35,9 @@ const GET_EVENT = gql`
 `
 
 function EventPage() {
-    const router = useRouter()
+  const router = useRouter()
   const { id } = router.query
-  
+
   const { loading, data } = useQuery(GET_EVENT, { variables: { id } })
 
   const goBack = () => router.push('/')
