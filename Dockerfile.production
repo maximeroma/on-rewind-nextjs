@@ -6,7 +6,7 @@ WORKDIR /usr/src/app
 
 # Installing dependencies
 COPY package*.json /usr/src/app/
-RUN npm install --production
+RUN npm ci --production && npm clean cache --force
 RUN npm run build
 
 # Copying source files
