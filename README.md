@@ -17,5 +17,6 @@ docker-compose -f docker-compose.prod.yml up web
 Test application:
 
 ```bash
+npm install
 npm run e2e
 ```
