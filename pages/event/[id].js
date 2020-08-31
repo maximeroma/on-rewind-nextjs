@@ -6,7 +6,7 @@ import ReactPlayer from 'react-player'
 import EventItem from '../../components/EventItem'
 import Loader from '../../components/Loader'
 import Button from '../../components/Button'
-import styles from '../../styles/EventPage.module.scss'
+import styles from './EventPage.module.scss'
 
 const GET_EVENT = gql`
   query GetEvent($id: ID!) {
@@ -69,7 +69,9 @@ function EventPage() {
                     />
                   </div>
                 ) : (
-                  <div>Stream not available</div>
+                  <div className={styles.stream_not_found}>
+                    Stream not available
+                  </div>
                 )}
               </div>
             </div>
