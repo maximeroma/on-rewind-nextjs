@@ -2,7 +2,7 @@ import '../styles/globals.css'
 
 import { ApolloProvider } from '@apollo/client'
 import { useApollo } from '../lib/apollo-client'
-import styles from '../styles/Index.module.scss'
+import styles from './app.module.scss'
 
 export default function App({ Component, pageProps }) {
   const apolloClient = useApollo(pageProps.initialApolloState)
@@ -11,11 +11,10 @@ export default function App({ Component, pageProps }) {
     <ApolloProvider client={apolloClient}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <div>On Rewind App</div>
+          <div>On Rewind App </div>
         </div>
         <Component {...pageProps} />
       </div>
-      
     </ApolloProvider>
   )
 }

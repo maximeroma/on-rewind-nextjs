@@ -1,13 +1,12 @@
 import React from 'react'
 import { useQuery, gql } from '@apollo/client'
-
 import { useRouter } from 'next/router'
 import ReactPlayer from 'react-player'
 
 import EventItem from '../../components/EventItem'
 import Loader from '../../components/Loader'
 import Button from '../../components/Button'
-import styles from '../../styles/EventPage.module.scss'
+import styles from './EventPage.module.scss'
 
 const GET_EVENT = gql`
   query GetEvent($id: ID!) {
@@ -36,9 +35,9 @@ const GET_EVENT = gql`
 `
 
 function EventPage() {
-    const router = useRouter()
+  const router = useRouter()
   const { id } = router.query
-  
+
   const { loading, data } = useQuery(GET_EVENT, { variables: { id } })
 
   const goBack = () => router.push('/')
@@ -70,7 +69,9 @@ function EventPage() {
                     />
                   </div>
                 ) : (
-                  <div>Stream not available</div>
+                  <div className={styles.stream_not_found}>
+                    Stream not available
+                  </div>
                 )}
               </div>
             </div>

@@ -1,11 +1,13 @@
 import React from 'react'
 import { useRouter } from 'next/router'
+
 import styles from './EventItem.module.scss'
 
 function EventItem({ item }) {
   const router = useRouter()
-
-  const goToEvent = () => router.push('/event/' + item.id)
+  console.log(router.pathname)
+  const goToEvent =
+    router.pathname === '/' ? () => router.push('/event/' + item.id) : undefined
 
   return (
     <div className={styles.container}>
